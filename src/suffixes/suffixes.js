@@ -1,0 +1,15 @@
+export const suffixes = [
+    'a',
+    'e',
+    'i',
+    'o',
+    'u',
+    'ar',
+    'or',
+    'ot',
+    'th',
+    'ii',
+    'ith',
+    'oth',
+    'ion',
+]

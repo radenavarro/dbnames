@@ -2,7 +2,7 @@ import "./Main.scss"
 import {Button, Input, Select} from "antd";
 import {useState} from "react";
 import { RocketOutlined } from '@ant-design/icons';
-import {barzonator} from "../helpers/helpers";
+import {barzonator, syllable} from "../helpers/helpers";
 const { Option } = Select;
 
 const Main = props => {
@@ -31,10 +31,20 @@ const Main = props => {
                         shape="round"
                         icon={<RocketOutlined /> ?? ''}
                         onClick ={(e) => {
-                            setGeneratedWord(barzonator(word))
+                            setGeneratedWord(syllable.barzonator(word))
                         }}
                     >
                         Generate
+                    </Button>
+                    <Button
+                        type="primary"
+                        shape="round"
+                        icon={<RocketOutlined /> ?? ''}
+                        onClick ={(e) => {
+                            setGeneratedWord(syllable.swapFirstAndLast(word))
+                        }}
+                    >
+                        Syllable swap
                     </Button>
                     <span className={'main-output'}>{generatedWord}</span>
                 </div>
